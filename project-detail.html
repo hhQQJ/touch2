@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>项目详情</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+      }
+      .project-imgs img {
+        max-width: 400px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="project-detail"></div>
+    <script>
+      // 项目数据
+      const projects = {
+        1: {
+          title: "FrameFocus",
+          desc: "这是FrameFocus项目的详细介绍，可以写多行描述。",
+          imgs: [
+            "images/projects/p1.webp",
+            "images/projects/p2-1.webp",
+            "images/projects/p2-2.webp",
+          ],
+        },
+        2: {
+          title: "项目2标题",
+          desc: "项目2描述...",
+          imgs: ["images/projects/p2.webp", "images/projects/p2-1.webp"],
+        },
+        3: {
+          title: "赛桥生物",
+          desc: "赛桥生物项目的详细介绍，可以写多行描述。",
+          imgs: ["images/projects/p3.webp"],
+        },
+        10: {
+          title: "项目10标题",
+          desc: "项目10描述...",
+          imgs: ["images/projects/p10.webp"],
+        },
+      };
+
+      // 获取URL参数
+      function getQueryParam(name) {
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+      }
+      const projectId = getQueryParam("project");
+      const detail = document.getElementById("project-detail");
+      const data = projects[projectId];
+      if (data) {
+        detail.innerHTML = `
+        <h2>${data.title}</h2>
+        <p>${data.desc}</p>
+        <div class="project-imgs">
+          ${data.imgs.map((src) => `<img src="${src}" alt="">`).join("")}
+        </div>
+      `;
+      } else {
+        detail.innerHTML = `<p>未找到该项目</p>`;
+      }
+    </script>
+  </body>
+</html>
