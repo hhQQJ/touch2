@@ -2,8 +2,6 @@
 
 A clean, minimalist, and fully responsive portfolio template for developers. Designed to be lightweight, accessible, and easy to customize.
 
-![Portfolio Screenshot](./demo/project_demo.jpg)
-
 ## Table of Contents
 
 - [Features](#features)

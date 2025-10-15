@@ -2,41 +2,100 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>项目详情</title>
     <style>
       body {
         font-family: sans-serif;
         margin: 40px;
       }
+      .project-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .project-imgs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
       .project-imgs img {
-        max-width: 400px;
+        display: block;
         margin: 10px;
+        height: auto;
+        width: auto;
+        max-width: 100%; /* 防止超出屏幕 */
       }
     </style>
   </head>
   <body>
-    <div id="project-detail"></div>
+    <div class="project-container">
+      <div id="project-detail"></div>
+    </div>
+    <!-- 首页 hero 区域示例 -->
+    <div class="hero">
+      <picture>
+        <source media="(max-width: 600px)" srcset="images/hero-mobile.webp">
+        <source media="(max-width: 1200px)" srcset="images/hero-tablet.webp">
+        <img src="images/hero-desktop.webp" alt="Hero Image" class="hero__img">
+      </picture>
+    </div>
     <script>
       // 项目数据
       const projects = {
         1: {
           title: "FrameFocus",
           desc: "这是FrameFocus项目的详细介绍，可以写多行描述。",
+          imgs: ["images/projects/p1.webp", "images/projects/p1-1.webp"],
+        },
+        2: {
+          title: "项目2标题",
+          desc: "项目2描述...",
           imgs: [
-            "images/projects/p1.webp",
+            "images/projects/p2.webp",
             "images/projects/p2-1.webp",
             "images/projects/p2-2.webp",
           ],
+        },
+        3: {
+          title: "点石投资",
+          desc: "赛桥生物项目的详细介绍，可以写多行描述。",
+          imgs: ["images/projects/p3.webp"],
+        },
+        4: {
+          title: "高斯天行网络仿真",
+          desc: "项目4描述...",
+          imgs: ["images/projects/p4.webp", "images/projects/p4-1.webp"],
+        },
+        5: {
+          title: "项目5标题",
+          desc: "项目5描述...",
+          imgs: ["images/projects/p5.webp", "images/projects/p5-1.webp"],
+        },
+        6: {
+          title: "项目6标题",
+          desc: "项目6描述...",
+          imgs: ["images/projects/p6.webp", "images/projects/p6-1.webp"],
+        },
+        7: {
+          title: "项目7标题",
+          desc: "项目7描述...",
+          imgs: ["images/projects/p7.webp", "images/projects/p7-1.webp"],
         },
         2: {
           title: "项目2标题",
           desc: "项目2描述...",
           imgs: ["images/projects/p2.webp", "images/projects/p2-1.webp"],
         },
-        3: {
-          title: "赛桥生物",
-          desc: "赛桥生物项目的详细介绍，可以写多行描述。",
-          imgs: ["images/projects/p3.webp"],
+        8: {
+          title: "项目8标题",
+          desc: "项目8描述...",
+          imgs: ["images/projects/p8.webp", "images/projects/p8-1.webp"],
+        },
+        9: {
+          title: "项目9标题",
+          desc: "项目9描述...",
+          imgs: ["images/projects/p9.webp", "images/projects/p9-1.webp"],
         },
         10: {
           title: "项目10标题",
