@@ -722,3 +722,7 @@ body a {
   width: 1.1em;
   height: 1.1em;
 }
+/* 临时兜底：确保 preloader 不遮挡页面 */
+.preloader {
+  display: none !important;
+}
