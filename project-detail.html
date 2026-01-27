@@ -37,20 +37,17 @@
       // 项目数据
       const projects = {
         1: {
-          title: "视达极光",
-          desc: "直播公司品牌VI",
+          title: "零壹空间火箭涂装",
+          desc: "火箭涂装设计",
           imgs: [
-            "images/projects/sj_00.jpg",
-            "images/projects/sj_01.jpg",
-            "images/projects/sj_02.jpg",
-            "images/projects/sj_03.jpg",
-            "images/projects/sj_04.jpg",
-            "images/projects/sj_05.jpg",
-            "images/projects/sj_06.jpg",
-            "images/projects/sj_07.jpg",
-            "images/projects/sj_08.jpg",
-            "images/projects/sj_09.jpg",
-            "images/projects/sj_10.jpg",
+            "images/projects/os-0.webp",
+            "images/projects/os-1.webp",
+            "images/projects/os-2.webp",
+            "images/projects/os-3.webp",
+            "images/projects/os-4.webp",
+            "images/projects/os-5.webp",
+            "images/projects/os-6.webp",
+            "images/projects/os-7.webp",
           ],
         },
         2: {
@@ -83,6 +80,11 @@
           ],
         },
         4: {
+          title: "角弓鸣军工",
+          desc: "军工科技企业官网",
+          imgs: ["images/projects/p1-1.webp"],
+        },
+        5: {
           title: "高斯天行仿真通信",
           desc: "高斯天行仿真通信官网与界面设计",
           imgs: [
@@ -95,25 +97,6 @@
             "images/projects/gw-00.png",
             "images/projects/gw-01.png",
             "images/projects/p4-1.webp",
-          ],
-        },
-        5: {
-          title: "C6广场",
-          desc: "商场品牌VI与导视系统",
-          imgs: [
-            "images/projects/p5-1.webp",
-            "images/projects/p5-2.webp",
-            "images/projects/p5-3.webp",
-            "images/projects/p5-4.webp",
-            "images/projects/p5-5.webp",
-            "images/projects/p5-6.webp",
-            "images/projects/p5-7.webp",
-            "images/projects/p5-8.webp",
-            "images/projects/p5-9.webp",
-            "images/projects/p5-10.webp",
-            "images/projects/p5-11.webp",
-            "images/projects/p5-12.webp",
-            "images/projects/p5-13.webp",
           ],
         },
         6: {
@@ -134,20 +117,22 @@
           ],
         },
         7: {
-          title: "喝Drink Beer",
-          desc: "精酿啤酒吧品牌与空间设计",
+          title: "C6广场",
+          desc: "商场品牌VI与导视系统",
           imgs: [
-            "images/projects/drink_00.jpg",
-            "images/projects/drink_01.jpg",
-            "images/projects/drink_02.jpg",
-            "images/projects/drink_03.jpg",
-            "images/projects/drink_04.jpg",
-            "images/projects/drink_05.jpg",
-            "images/projects/drink_06.jpg",
-            "images/projects/drink_07.jpg",
-            "images/projects/drink_08.jpg",
-            "images/projects/drink_09.jpg",
-            "images/projects/drink_10.jpg",
+            "images/projects/p5-1.webp",
+            "images/projects/p5-2.webp",
+            "images/projects/p5-3.webp",
+            "images/projects/p5-4.webp",
+            "images/projects/p5-5.webp",
+            "images/projects/p5-6.webp",
+            "images/projects/p5-7.webp",
+            "images/projects/p5-8.webp",
+            "images/projects/p5-9.webp",
+            "images/projects/p5-10.webp",
+            "images/projects/p5-11.webp",
+            "images/projects/p5-12.webp",
+            "images/projects/p5-13.webp",
           ],
         },
         8: {
@@ -168,9 +153,21 @@
           ],
         },
         9: {
-          title: "角弓鸣科技",
-          desc: "军工科技企业官网",
-          imgs: ["images/projects/p1-1.webp"],
+          title: "喝Drink Beer",
+          desc: "精酿啤酒吧品牌与空间设计",
+          imgs: [
+            "images/projects/drink_00.jpg",
+            "images/projects/drink_01.jpg",
+            "images/projects/drink_02.jpg",
+            "images/projects/drink_03.jpg",
+            "images/projects/drink_04.jpg",
+            "images/projects/drink_05.jpg",
+            "images/projects/drink_06.jpg",
+            "images/projects/drink_07.jpg",
+            "images/projects/drink_08.jpg",
+            "images/projects/drink_09.jpg",
+            "images/projects/drink_10.jpg",
+          ],
         },
         10: {
           title: "壹杯Un Coup bistro",
@@ -193,17 +190,20 @@
           ],
         },
         11: {
-          title: "零壹空间火箭涂装",
-          desc: "火箭涂装设计",
+          title: "视达极光",
+          desc: "直播公司品牌VI",
           imgs: [
-            "images/projects/os-0.webp",
-            "images/projects/os-1.webp",
-            "images/projects/os-2.webp",
-            "images/projects/os-3.webp",
-            "images/projects/os-4.webp",
-            "images/projects/os-5.webp",
-            "images/projects/os-6.webp",
-            "images/projects/os-7.webp",
+            "images/projects/sj_00.jpg",
+            "images/projects/sj_01.jpg",
+            "images/projects/sj_02.jpg",
+            "images/projects/sj_03.jpg",
+            "images/projects/sj_04.jpg",
+            "images/projects/sj_05.jpg",
+            "images/projects/sj_06.jpg",
+            "images/projects/sj_07.jpg",
+            "images/projects/sj_08.jpg",
+            "images/projects/sj_09.jpg",
+            "images/projects/sj_10.jpg",
           ],
         },
         12: {
@@ -294,12 +294,12 @@
       const data = projects[projectId];
       if (data) {
         detail.innerHTML = `
-        <h2>${data.title}</h2>
-        <p>${data.desc}</p>
-        <div class="project-imgs">
-          ${data.imgs.map((src) => `<img src="${src}" alt="">`).join("")}
-        </div>
-      `;
+              <h2>${data.title}</h2>
+              <p>${data.desc}</p>
+              <div class="project-imgs">
+                ${data.imgs.map((src) => `<img src="${src}" alt="">`).join("")}
+              </div>
+            `;
       } else {
         detail.innerHTML = `<p>未找到该项目</p>`;
       }
